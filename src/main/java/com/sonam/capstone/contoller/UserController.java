@@ -64,7 +64,7 @@ public class UserController {
   User user = userService.findUserByEmail(auth.getName());
 
   model.addObject("userName", user.getFirstname() + " " + user.getLastname());
-  model.setViewName("home/home");
+  model.setViewName("home");
   return model;
  }
 
@@ -72,6 +72,13 @@ public class UserController {
  public ModelAndView accessDenied() {
   ModelAndView model = new ModelAndView();
   model.setViewName("errors/access_denied");
+  return model;
+ }
+
+ @RequestMapping(value= {"/aboutUs"})
+ public ModelAndView aboutUs() {
+  ModelAndView model = new ModelAndView();
+  model.setViewName("aboutUs");
   return model;
  }
 }

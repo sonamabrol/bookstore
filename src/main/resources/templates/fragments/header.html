@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"
+            th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+
+    <link href="../../static/css/guru.css"
+          th:href="@{css/guru.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div class="container">
+    <div th:fragment="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="navbar-brand" href="#" th:href="@{/home/home}">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="navbar-brand" href="#" th:href="@{/books}">Books</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="navbar-brand" href="#" th:href="@{/books/new}">Create Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#" th:href="@{/aboutUs}">About Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="">
+                    <h2>Rasmussen Capstone</h2>
+
+                    <h3>Book Store App</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <img src="../../static/images/project.png" width="200"
+                     th:src="@{/images/project.png}"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

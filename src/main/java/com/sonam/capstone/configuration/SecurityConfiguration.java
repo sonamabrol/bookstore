@@ -54,6 +54,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
    .tokenRepository(persistentTokenRepository())
    .tokenValiditySeconds(60*60)
    .and().exceptionHandling().accessDeniedPage("/access_denied");
+    http.csrf().disable();
+    http.headers().frameOptions().disable();
+
+    http.authorizeRequests().antMatchers("/webjars/**").permitAll();
  }
 
  @Bean
